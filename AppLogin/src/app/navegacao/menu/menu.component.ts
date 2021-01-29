@@ -7,6 +7,7 @@ import { LoginService } from 'src/app/services/login.services';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent implements OnInit {
 
   public email!: string;
@@ -22,9 +23,7 @@ export class MenuComponent implements OnInit {
 
   cadastrar(){
 
-    // this.LoginService.cadastrarLogin(this.email,this.password);
-
-    console.log(this.email+" "+ this.password);
+    this.LoginService.cadastrarLogin(this.email,this.password).subscribe();
 
   }
 
